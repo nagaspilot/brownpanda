@@ -4,6 +4,8 @@
 
 brownpanda is NagasPilot's specialized automotive gateway hardware that enables universal vehicle compatibility while maintaining the highest safety standards.
 
+> **🔧 Repository Scope**: This repository contains hardware specifications, firmware architecture documentation, and integration guides. Hardware designs and production firmware are proprietary and maintained privately.
+
 ## Overview
 
 brownpanda translates between vehicle-specific protocols and a universal Tesla Model 3 standard CAN bus protocol (500 kbps, non-CAN-FD), enabling openpilot compatibility across any vehicle brand.
@@ -119,6 +121,8 @@ We do not have a dedicated Discord or Slack channel. For discussions and communi
 
 - **Facebook**: [https://www.facebook.com/nagaspilot](https://www.facebook.com/nagaspilot)
 
+**Note**: NagasPilot is a private project. Hardware designs and production firmware are accessible only to authorized partners and developers.
+
 ## License
 
 brownpanda hardware design and firmware are proprietary to NagasPilot.
@@ -130,9 +134,3 @@ Software integration libraries are MIT licensed where applicable.
 **THIS IS ALPHA QUALITY HARDWARE FOR RESEARCH PURPOSES ONLY. THIS IS NOT A PRODUCT.
 YOU ARE RESPONSIBLE FOR COMPLYING WITH LOCAL LAWS AND REGULATIONS.
 NO WARRANTY EXPRESSED OR IMPLIED.**
-
-## Community
-
-We do not have a dedicated Discord or Slack channel. For discussions and community support, visit our Facebook page:
-
-- **Facebook**: [https://www.facebook.com/nagaspilot](https://www.facebook.com/nagaspilot)
