@@ -11,8 +11,9 @@ brownpanda translates between vehicle-specific protocols and a universal Tesla M
 ## Architecture
 
 ### Hardware Specifications
+- **Microcontroller**: Infineon AURIX TC275 (TriCore architecture)
 - **Safety Grade**: AEC-Q100 automotive qualification
-- **Microcontroller**: Automotive-grade with fail-safe fallback mechanisms
+- **RTOS**: FreeRTOS with ISO 26262 ASIL-D safety extensions
 - **Protocol Support**: Universal vehicle protocol translation
 - **Safety Features**: Physical override switch with instant deactivation
 
@@ -33,13 +34,32 @@ brownpanda translates between vehicle-specific protocols and a universal Tesla M
 - **OEM ADAS Preservation**: Factory ADAS remains functional when switch is not engaged
 - **Seamless Mode Switching**: In enhancedpilot, ADAS safety logic migrates to brownpanda for smooth OEM ↔ enhancedpilot transitions
 
+## TC275 + FreeRTOS Safety Architecture
+
+brownpanda implements automotive-grade safety using the powerful TC275 microcontroller with FreeRTOS:
+
+### TC275 TriCore Platform
+- **Architecture**: 32-bit TriCore AURIX with three independent cores
+- **Performance**: Up to 200 MHz processing power
+- **Safety**: Hardware memory protection and lockstep cores
+- **CAN Controllers**: Dual CAN-FD controllers for vehicle communication
+- **Certification**: ISO 26262 ASIL-D capable hardware platform
+
+### FreeRTOS Safety Extensions
+- **Real-Time Scheduling**: Deterministic task scheduling for safety-critical operations
+- **Memory Protection**: MPU-based memory isolation between tasks
+- **Fault Monitoring**: Watchdog timers and health monitoring
+- **Safety Tasks**: Dedicated high-priority tasks for safety validation
+- **Emergency Response**: <10ms emergency stop response time
+
 ## enhancedpilot Integration
 
 For the enhancedpilot project, brownpanda provides enhanced capabilities:
 
-- **Safety Logic Migration**: ADAS safety moved to gateway hardware
+- **Safety Logic Migration**: ADAS safety moved to TC275 gateway hardware running FreeRTOS
 - **Mode Switching**: Seamless integration between OEM ADAS and enhancedpilot
-- **Hardware Arbitration**: Intelligent control handoff between systems
+- **Hardware Arbitration**: Real-time intelligent control handoff between systems
+- **Redundant Validation**: Dual-source safety decision making (internal + external)
 - **Fallback Protection**: Automatic return to OEM ADAS on any fault condition
 
 ## Technical Specifications
