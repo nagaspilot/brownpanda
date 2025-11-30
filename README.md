@@ -10,7 +10,7 @@ brownpanda makes your Chinese EV compatible with advanced driver assistance syst
 
 Browse our growing library of supported Chinese EV brands and models:
 
-### 🚗 [View Supported Vehicles →](branding/)
+### 🚗 [View Supported Vehicles →](cars/)
 
 Each vehicle brand has been carefully tested and tuned for optimal performance and safety.
 
@@ -30,7 +30,7 @@ A simple plug-and-play gateway that connects your Chinese EV to modern driver as
 
 ## Get Started
 
-1. **Check Compatibility** - Find your vehicle in our [branding folder](branding/)
+1. **Check Compatibility** - Find your vehicle in our [cars folder](cars/)
 2. **Contact Us** - Reach out via [Facebook](https://www.facebook.com/nagaspilot)
 3. **Professional Installation** - We recommend professional installation for safety
 
