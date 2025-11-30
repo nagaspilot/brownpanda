@@ -1,136 +1,45 @@
 # brownpanda
 
-**Automotive Gateway Hardware for Universal ADAS Integration**
+**Universal Gateway for Chinese EV Compatibility**
 
-brownpanda is NagasPilot's specialized automotive gateway hardware that enables universal vehicle compatibility while maintaining the highest safety standards.
-
-> **🔧 Repository Scope**: This repository contains hardware specifications, firmware architecture documentation, and integration guides. Hardware designs and production firmware are proprietary and maintained privately.
-
-## Overview
-
-brownpanda translates between vehicle-specific protocols and a universal Tesla Model 3 standard CAN bus protocol (500 kbps, non-CAN-FD), enabling openpilot compatibility across any vehicle brand.
-
-## Architecture
-
-### Hardware Specifications
-- **Microcontroller**: Infineon AURIX TC275 (TriCore architecture)
-- **Safety Grade**: AEC-Q100 automotive qualification
-- **RTOS**: FreeRTOS with ISO 26262 ASIL-D safety extensions
-- **Protocol Support**: Universal vehicle protocol translation
-- **Safety Features**: Physical override switch with instant deactivation
-
-### Protocol Standard
-- **Base Protocol**: Tesla Model 3 CAN bus (500 kbps, non-CAN-FD)
-- **Compatibility**: Comma 3 classic and newer devices
-- **Translation**: Bidirectional vehicle protocol ↔ Tesla protocol conversion
-
-## Safety Features
-
-### Hardware Safety
-- AEC-Q100 grade automotive microcontrollers
-- Fail-safe fallback mechanisms
-- Hardware watchdog and redundancy systems
-
-### User Safety
-- **Physical Switch**: Instant system override capability
-- **OEM ADAS Preservation**: Factory ADAS remains functional when switch is not engaged
-- **Seamless Mode Switching**: In enhancedpilot, ADAS safety logic migrates to brownpanda for smooth OEM ↔ enhancedpilot transitions
-
-## TC275 + FreeRTOS Safety Architecture
-
-brownpanda implements automotive-grade safety using the powerful TC275 microcontroller with FreeRTOS:
-
-### TC275 TriCore Platform
-- **Architecture**: 32-bit TriCore AURIX with three independent cores
-- **Performance**: Up to 200 MHz processing power
-- **Safety**: Hardware memory protection and lockstep cores
-- **CAN Controllers**: Dual CAN-FD controllers for vehicle communication
-- **Certification**: ISO 26262 ASIL-D capable hardware platform
-
-### FreeRTOS Safety Extensions
-- **Real-Time Scheduling**: Deterministic task scheduling for safety-critical operations
-- **Memory Protection**: MPU-based memory isolation between tasks
-- **Fault Monitoring**: Watchdog timers and health monitoring
-- **Safety Tasks**: Dedicated high-priority tasks for safety validation
-- **Emergency Response**: <10ms emergency stop response time
-
-## enhancedpilot Integration
-
-For the enhancedpilot project, brownpanda provides enhanced capabilities:
-
-- **Safety Logic Migration**: ADAS safety moved to TC275 gateway hardware running FreeRTOS
-- **Mode Switching**: Seamless integration between OEM ADAS and enhancedpilot
-- **Hardware Arbitration**: Real-time intelligent control handoff between systems
-- **Redundant Validation**: Dual-source safety decision making (internal + external)
-- **Fallback Protection**: Automatic return to OEM ADAS on any fault condition
-
-## Technical Specifications
-
-### Communication
-- **Primary CAN**: 500 kbps standard CAN bus
-- **Vehicle CAN**: Varies by vehicle (translated by brownpanda)
-- **Diagnostic**: OBD-II pass-through support
-- **Update Interface**: Secure firmware update capability
-
-### Power Requirements
-- **Operating Voltage**: 12V automotive (9-16V tolerance)
-- **Power Consumption**: <5W typical operation
-- **Standby Current**: <50mA when vehicle off
-
-### Environmental
-- **Operating Temperature**: -40°C to +85°C
-- **Storage Temperature**: -55°C to +125°C
-- **Vibration**: Automotive grade (ISO 16750-3)
-- **EMI/EMC**: Meets automotive standards
-
-## Development Status
-
-brownpanda is currently in active development for Chinese EV market integration.
-
-### Current Status
-- ✅ Core protocol translation engine
-- ✅ Safety watchdog implementation
-- ✅ Physical override switch
-- 🔄 Vehicle-specific tuning profiles
-- 🔄 OEM ADAS integration testing
-
-### Roadmap
-- Enhanced sensor fusion support (radar, LiDAR)
-- Extended vehicle protocol library
-- Advanced diagnostic capabilities
-- Over-the-air update system
-
-## Safety & Compliance
-
-⚠️ **IMPORTANT SAFETY NOTICE**
-
-brownpanda is automotive safety-critical hardware. Improper installation or modification can result in:
-- Loss of vehicle control
-- Unexpected acceleration/braking
-- Safety system failures
-
-**Requirements:**
-- Professional installation recommended
-- Proper wiring and grounding essential
-- Regular safety validation testing
-- Compliance with local vehicle modification laws
-
-## Community
-
-We do not have a dedicated Discord or Slack channel. For discussions and community support, visit our Facebook page:
-
-- **Facebook**: [https://www.facebook.com/nagaspilot](https://www.facebook.com/nagaspilot)
-
-**Note**: NagasPilot is a private project. Hardware designs and production firmware are accessible only to authorized partners and developers.
-
-## License
-
-brownpanda hardware design and firmware are proprietary to NagasPilot.
-
-Software integration libraries are MIT licensed where applicable.
+brownpanda makes your Chinese EV compatible with advanced driver assistance systems through smart hardware integration.
 
 ---
 
-**THIS IS ALPHA QUALITY HARDWARE FOR RESEARCH PURPOSES ONLY. THIS IS NOT A PRODUCT.
-YOU ARE RESPONSIBLE FOR COMPLYING WITH LOCAL LAWS AND REGULATIONS.
-NO WARRANTY EXPRESSED OR IMPLIED.**
+## Supported Vehicles
+
+Browse our growing library of supported Chinese EV brands and models:
+
+### 🚗 [View Supported Vehicles →](branding/)
+
+Each vehicle brand has been carefully tested and tuned for optimal performance and safety.
+
+---
+
+## What is brownpanda?
+
+A simple plug-and-play gateway that connects your Chinese EV to modern driver assistance technology.
+
+**Key Features:**
+- ✅ Easy installation with physical safety switch
+- ✅ Works with your car's existing systems
+- ✅ Professional automotive-grade hardware
+- ✅ Tested on real roads in Thailand
+
+---
+
+## Get Started
+
+1. **Check Compatibility** - Find your vehicle in our [branding folder](branding/)
+2. **Contact Us** - Reach out via [Facebook](https://www.facebook.com/nagaspilot)
+3. **Professional Installation** - We recommend professional installation for safety
+
+---
+
+## Community
+
+📱 **Facebook**: [https://www.facebook.com/nagaspilot](https://www.facebook.com/nagaspilot)
+
+---
+
+**Private project for authorized partners only.**
